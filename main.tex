@@ -1,0 +1,211 @@
+%Code for document and packages
+\documentclass[a4paper]{report}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{indentfirst}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage{changepage}
+\usepackage{textcomp}
+\usepackage{lipsum}
+\begin{document}
+% My environments.
+%Idented list e.g. for media and buffers in methods 
+\newenvironment{indentlist}{\begin{adjustwidth}{1.5cm}{}}{\end{adjustwidth}}
+% Begin document coding 
+\title{Thesis}
+\date{}
+\author{Ruby White}
+\maketitle
+\tableofcontents
+\newpage
+%Chapters 
+\addcontentsline{toc}{section}{Declaration}
+Declaration
+\newline This thesis.. 
+\addcontentsline{toc}{section}{Acknowledgements}
+\addcontentsline{toc}{section}{Abstract}
+\addcontentsline{toc}{section}{Lay Summary}
+\addcontentsline{toc}{section}{Abbreviations}
+\addcontentsline{toc}{section}{Legend of tables $\&$ figures}
+\chapter{Introduction}
+\label{chapter1}
+\chapter{Materials \& Methods}
+\label{chapter2}
+\section{Media \& buffer solutions}
+\sectiontion{Cell culture medias}
+%New environment for indenting whole paragraph/list
+\begin{indentlist}
+\newline\underline{Complete DMEM}
+\vspace{2mm}\newline Dubeccos Modified Eagle Media (DMEM) ()
+\newline 10\% FBS ()
+\newline 1x L-glutamine ()
+\newline 1x Pencillin/Streptomycin ()
+\newline (For HEK293 STF cells supplement with 200$\mu$g/ml G418()
+\vspace{2mm}\newline\underline{Complete RPMI}
+\vspace{2mm}\newline Roswell Park Memorial Institute (RPMI) ()
+\newline 10\% FBS ()
+\newline 1x L-glutamine ()
+\newline 1x Pencillin/Streptomycin ()
+\vspace{2mm}\newline\underline{R-spondin basal growth and selection media}
+\vspace{2mm}\newline DMEM-High glucose 
+\newline 10\% FBS
+\newline 2 mM L-glutamine
+\newline 1x Penicillin/Streptomycin
+\newline(For selection media supplement with 300 $\mu$g/mL of Zeocin)
+\vspace{2mm}\newline\underline{L-Wnt-3a basal growth and selection meida}
+\vspace{2mm}\newline DMEM ()
+\newline 10\% FBS
+\newline 1x Penicillin/Streptomycin
+\newline (For selection media supplement with 125 $\mu$g/mL of Zeocin)
+\vspace{2mm}\newline\underline{Organoid base growth media}
+\vspace{2mm}\newline Advanced DMEM/F12 
+\newline 2 mM L-glutamine
+\newline 1x N2 supplement
+\newline 1x B27 supplement 
+\newline 10 mM HEPES
+\vspace{2mm}\newline\underline{Organoid isolation media}
+\vspace{2mm}\newline Organoid base media supplemented with
+\newline 1x Pencillin/Streptomycin
+\newline 30\% Wnt conditioned media 
+\newline 10\% R-spondin condition media 
+\newline 1 mM N-acetylcystiene (Merck, A9165-25g)
+\newline 50 ng/ml Recombinant Epidermal Growth Factor (EGF)
+\newline 100 ng/ml Recombinant mouse noggin 
+\newline 10 $\mu$m Rho kinase (ROCK) inhibitor (also known as Y-26732) 
+\vspace{2mm}\newline\underline{Organoid differentiation media}
+\vspace{2mm}\newline Organoid base media supplemented with 
+\newline 10\% R-spondin condition media 
+\newline 1 mm N-acetylcystiene (Merck, A9165-25g)
+\newline 50 ng/ml Recombinant Epidermal Growth Factor (EGF)
+\newline 100 ng/ml Recombinant mouse noggin (Peprotech, ) 
+
+\end{indentlist}
+\subsectiontion{Buffer solutions}
+%New environment for indenting whole paragraph/list
+\begin{indentlist}
+\vspace{2mm}\newline\underline{FACs buffer}
+\vspace{2mm}\newline Phosphate buffered saline (PBS) ()
+\newline 10\% FBS () 
+\newline 2 mM EDTA 
+\vspace{2mm}\newline\underline{Microscopy buffers}
+\vspace{2mm}\begin{adjustwidth}{10mm}
+\newline\underline{Fixation} 
+\newline 4\% Paraformaldehyde diluted in PBS
+\vspace{2mm}\newline\underline{Permeabilisation \& Block}
+\newline PBS
+\newline 5\% FBS () 
+\newline 2.5\% Triton X ()
+\vspace{2mm}\newline\underline{Diluent}
+\newline 5\% FBS ()
+\newline 0.25\% Triton X ()
+\end{adjustwidth}
+\vspace{2mm}\newline\underline{Silver stain buffers}
+\begin{adjustwidth}{10mm}
+\newline\underline{Fixation buffer}
+\newline 100 ml Ethanol (100\%)
+\newline 25 ml Acetic acid ()
+\newline 100 ml ddH\textsubscript{2}0
+\vspace{2mm}\newline\underline{Sensitiation buffer}
+\newline 17 g Sodium acetate
+\newline 0.5 g Sodium thiosulfate 
+\newline 75 ml Ethanol () 
+\newline Make up to 250 ml with ddH\textsubscript{2}0
+\vspace{2mm}\newline\underline{Silver stain buffer}
+\newline 0.1 g Silver nitrate
+\newline 40 ml of ddH\textsubscript{2}0
+\vspace{2mm}\newline\underline{Developing buffer}
+\newline 2.5 g Sodium carbonate 
+\newline 20 $\mu$l Formaldehyde (37\%) ()
+\end{adjustwidth}
+
+\vspace{2mm}\newline\underline{Elisa Buffers}
+\vspace{2mm}\newline\underline{Gel electrophoresis and western blot buffers}
+\begin{adjustwidth}{10mm}
+\vspace{2mm}\newline\underline{NuPAGE MOPS SDS buffer}
+\vspace{2mm}\newline 50 ml NuPAGE MOPS SDS buffer (Thermo Fisher Scientific)
+\newline 950 ml deionized H\textsubscript{2}0
+
+\end{adjustwidth}
+
+\end{indentlist}
+
+
+
+
+\sectiontion{Cell culture}
+\subsection{R-spondin conditioned media}
+\justifying
+HA-R-spondin-1-Fc 293T cells (R-SPO1) (Amsbio) were cultured for at least 5 days in selection growth media. Cells were passaged using trypsin () and cultured for 10 days in R-spondin basal growth media for 10 days at 37\textdegree{C} 5\% CO\textsuperscript{2}. Conditioned media was collected after 10 days and centrifuged at 3000rpm in () at 4\textdegree{C} for 15 min. Conditioned media was then filtered through a 0.22 $\mu$m filter (). R-spondin conditioned media was stored at -70\textdegree{C}. 
+\subsection{L-Wnt3a conditioned media}
+\justifying
+L-Wnt3a cells were gifted from Hans Clevers Laboratory. L-Wnt3a cells were cultured in L-Wnt selection media for at least 4 days prior to conditioning media, and passaged using trypLE Express (12605, Life Technologies). Cells were then cultured in L-Wnt growth media for 7 days. Conditioned media was collected and centrifuged for 5 min at 1500rpm at 4\textdegree{C} and filtered through a 0.22 $\mu$m filter. L-Wnt conditioned media was stored at 4\textdegree{C}. 
+\subsection{HEK STF culture \& Wnt bioactivity assay}
+HEK239 STF cells were cultured until confluent and then 100 $\mu$l was seeded into a black walled 96-well cell culture plate (Greiner bio-one, 655986) at 10,000 cells per well, and allowed to grow for 24hrs. After 24hrs 100 $\mu$l of Wnt3a, or R-spondin conditioned media was added and cells grown for 24hrs. Bioactivity was then measured using Steady Glo luciferase assay system from Promega (E2510) and measured on ()
+\section{Organoid culture}
+\subsection{Organoid Isolation}
+Mice were sacrificed, and the small intestine dissected by cutting at junction of the stomach pylorus and duodenum, and at the ileocaecal junction. SI were flushed gently with sterile PBS using a 1ml pipette and opened longitudinally. SI were then washed serially in a 6 well plate containing sterile PBS to remove intestinal contents. Samples were processed from this point on in a sterile TC hood on ice. SI were cut into approx. 2 mm sections into a 50 ml falcon of sterile PBS and washed using pre-wetted 10 ml serological pipettes. Allow intestinal pieces to settle by gravity on ice and remove wash supernatant. Repeat 10-15 times until the supernatant is clear. Spin pieces gently at 600 rpm for 3 min at 4\textdegree{}C. Remove supernatant and re-suspend tissue pieces in 25 ml of gentle cell dissociation media, incubate on rocker for 15 min at RT (Stem Cell Research, 7174). Allow pieces to settle by gravity on ice and remove dissociation media. Using a pre-wetted serological pipette wash pieces with PBS + 0.1\% BSA (Fisher Scientific, BP9700-100) by pipetting 3 times, allow the tissue to settle and pass the wash through a 70 $\mu$ cell strainer. Repeat a total of four times. Count number of crypts in each fraction. Take fractions enriched for intestinal crypts and spin at 1200 rpm for 3 min at 4\textdegree{}C. Re-suspend crypts in matrigel at ~50crypts/100 $\mu$ matrigel. Plate matrigel in ~50 $\mu$l blobs in a 6-well plate and incubate at 37\textdegree{}C 5\% CO\textsubscript{2} for 10 min. Place 2.5 ml of organoid isolation media per well and place in incubator.
+\nopagebreak
+\subsection{Organoid maintenance}
+Organoid cultures are kept in isolation media for one week after isolation and then maintained indefinitely in organoid expansion media. Organoids are maintained in 2.5 ml of media that is replenished every second day, or in 3 mL of media over a weekend. Organoids are passaged every ~5-7 days depending on the speed of growth.
+\vspace{2mm}\newline To passage organoids, all steps are performed on ice to prevent matrigel from solidifying. Organoid containing matrigel patties were detached from the culture plate using a cell scraper. Using a p1000 matrigel was gently broken up by pipetting 3-5 times. Organoids were then moved to 15 mL falcons, and washed in ice cold PBS, then centrifuged at 2000 x g for 2 min. The supernatant was aspirated and organoids re-suspended in 1 mL of Cell Recovery Solution (Corning, 354253), and incubated on ice for 40 min. 1 mL of organoid base media was added to stop dissociation, and material centrifuged at 2000 rpm for 2 min at 4\textdegree{C}. Aspirate supernatant, add 200 $\mu$l of organoid base media. Set pipette to 150 $\mu$l and break organoids by pipetting ~200 times until there are no visible big organoids. Add 2 ml of organoid base media and centrifuge at 1500 rpm for 5 min at 4\textdegree{C}. Re-suspend in appropriate matrigel volume for a 1/3 - 1/6 split. 
+\subsection{2-D transwell organoid growth}
+Organoids were grown for 2-4 days in organoid differentiation supplemented with X\% Wnt CM prior to seeding into transwells  () in order to form cystic organoidS enriched in ISCs. Terminally differentiated cells will not proliferate in 2-D transwell culture. 
+\vspace{2mm}\newline Transwell apical surface was coated with Collagen I rat tail () diluted in 0.2 M acetic acid at a final concentration of 50 mg/ml and incubated at RT for 1hr. Collagen was then aspirated, and the transwell surface washed 3x with 500 $\mu$l RT PBS. The final wash was left on until cells ready to be seeded.
+\vspace{2mm}\newline Matrigel patties containing organoids are gently broken up using a p1000 and pipetting 3-5 times, and transferred to 15 ml falcons. Material was washed with 5 ml ice cold PBS and centrifuged at 2000 rpm for 2 min at 4\textdegree{C}. Supernatant was aspirated and pellet re-suspended in 1 ml PBS using a p1000, 9 ml of PBS added and organoids allowed to settle by gravity for 10 min on ice. Supernatant was aspirated to the 2 ml mark and re-suspended using a 5 ml stripette. 10 ml of PBS was added and centrifuges at 2000 rpm for 2 min at RT. The supernatant was removed and 5 ml of TripLE () added to falcon and placed at 37\textdegree{C} for 3-5 min to dissociated 3-D organoids into a single cell suspension. Dissociation was stopped by adding 6 ml of organoid base growth media. Single cells centrifuged at 1,500 rpm for 5 min at RT. Cell pellet was re-suspended in 1 ml organoid base growth media and cells counted. Cells made up to 1x10\textsuperscript{6}/ml and 200 $\mu$l seeded into apical side of transwell (200,000 cells/transwell). The basolateral compartment of transwell was filled with 4 ml organoid expansion media supplemented with X\% Wnt CM. 
+\section {\textit{H. bakeri} lifecycle and excretory secretory products (HES)}
+%New paragraph on HES collection 
+\justifying
+CBF1 mice received 200 L3 larvae by oral gavage. At day 14 after infection mice were sacrificed and adult \textit{H.bakeri} worms collected from the intestine for culture in serum free RPMI 1640 at 37C. \textit{H.bakeri} excretory/secretory products were collected every 4 days, for 14 days. Total HES was centrifuged at 400 x g for 5 min to remove eggs, and supernatant was filtered through a 0.2 $\mu$m filter. Total HES was stored at -70\textdegree{C}. For some experiments HES was concentrated by spinning in 5 kDa MWCO vivaspin columns (Sartorius) at 4000 x g and PBS exchanged twice.
+\section{Extracellular vesicle purification \& quality control}
+\subsection{EV purification from HES}
+EVs were purified by ultracentrifugation using a SW40 rotor (Beckman Coulter) and polypropelene tubes () at 100,000 x g for 1 h 10 min at 4\textdegree{C}. Ultracentrifuged EV depleted supernatant was collected and concentrated in 5 kDa MWCO vivaspin columns (Sartorius). Ultracentrifuged EV pellet was washed twice with sterile PBS at 100,000 x g for 1 h 10 min at 4\textdegree{C}. PBS was then aspirated and the EV pellet was re-suspended in ~100 $\mu$l of sterile PBS. Protein concentrations were determined by Qubit () and samples frozen at -70\textdegree{C} and more than one freeze thaw cycles avoided.
+\subsection{EV quality control}
+\subsubsection{NanoSight quantification and size distribution}
+10 $\mu$l of EVs was diluted to 1 ml in sterile PBS and nano particle tracking performed using NanoSight LM10 (Malvern Planalytical). Three separate measurements were taken and averaged for final concentration. Total yield was calculated using the dilution factor and volume of sample.   
+\subsubsection{Silver stain}
+~1-5 $\mu$g of EV sample was heat inactivated at 70\textdegree{C} for 10 min in 1x LDS sample buffer. Gel electrophoresis was performed on samples using NuPAGE SDS-PAGE gel system (Thermo Fisher Scientific) using SDS MOPS buffer. All silver stain steps were performed on rocker. Gels were fixed in fixation buffer for 2-3 h. Fixation buffer was removed and replaced with sensitisation buffer for 30 min. Gel was then washed 3x in dH\textsubscript{2}0 for 5 min. Silver stain buffer was added for 20 min covered from light. Gels were then washed 2x in dH\textsubscript{2}0 for 1 min. Developing solution was added for 2-15 min and watched for the development of bands. Developing solution was removed and stopping solution added for 10 min and gels imaged using a ChemidDoc gel imager (Bio-rad).
+\subsubsection{Transmission electron microscopy}
+\newline 1 $\mu$l of EVs was diluted to 10 $\mu$l with sterile PBS. EVs were then fixed using 2\% Paraformaldehyde (PFA) and placed on Formvar-carbon-coated EM grids. These were then treated with glutaraldehyde, followed by uranyl oxalate and methyl cellulose.
+\section{Extracellular vesicle organoid interactions}
+\subsection{Fluorescent labelling of EVs}
+EV proteins were labelled using an amine reactive dye Alexa Fluor 647-TFP ester, which was reconstituted in DMSO to the concentration of 1 $\mu$g/$\mu$l. EV samples for labelling was combined with 10 $\mu$l of Alexa Fluor 647-TFP ester (10 $\mu$g), 100 $\mu$l of 1M sodium bicarbonate pH 8.3, and diluted to a total volume of 1 ml with 0.2 $\mu$m filtered sterile HBSS with Ca\textsuperscript{2+} Mg\textsuperscript{2+} (). Incubated on rocker for 1 h protected from light. Labelled EVs were then purified using a sepharose size exclusion column to remove dye aggregates and any remaining free protein contaminants that may be labelled 
+\citep{Buck2014ExosomesImmunity}
+\subsection{EV treatment \& uptake in 2-D \& 3-D organoid cultures}
+\section{Microscopy}
+\subsection{Microscopy of 2-D and 3-D transwell organoids}
+Aspirate media from 2-D transwell organoids and fix with 200 $\mu$ fixation buffer and incubated for 20 min at 4\textdegree{C}. Aspirate buffer and wash 3x with 200 $\mu$ PBS for 5 min at RT. 200 $\mu$l of permeabilisation and block buffer for 1 h at RT. Aspirate permeabilisation and block buffer and add $\mu$l of primary antibodies diluted in staining buffer at 4\textdegree{C} overnight covered from light. Washes were repeated twice before addition of secondary antibodies, and phallodin in staining buffer was added for 1 h at RT covered from light. Secondary antibodies were aspirated and transwell washed twice. Transwell membranes were then carefully cut from its insert using a scapel and placed on clean microscope slide. Transwell membranes were then mounted using ProLong Gold antifade () and covered with a glass coverslip.
+\vspace{2mm}\newline For 3-D organoids follow the protocol for passaging organoids until you have removed matrigel, stop prior to breaking organoids and fix with fixation buffer in 15 ml falcon tube for staining using the same method. Between staining step the organoids were spun at 2,000 rpm at 4\textdegree{C} for 2 mins and a large bore p1000 tip was used to re-suspend organoids gently without distruption. Once ready for mounting 3-D organoids were re-suspended carefully in (mounting agent) and mounted on a clean glass slide. 
+\vspace{2mm}\newline Antibodies used for microscopy are detailed in Table X. 
+
+\section{Flow cytometry}
+\section{Fluoresence activated cell sorting}
+\section{Single cell RNA sequencing $\&$ analysis}
+\section{Animal experiments}
+\subsection{Vaccination with \italics{H.bakeri} EVs}
+\subsection{Antibody production}
+\newpage\chapter{Visualising cell type specificity for uptake of EVs within the host intestinal epithelium}
+%This will include in vitro organoid culture microscopy and in vivo gut loop microscopy to address cell type specificity 
+\newpage\chapter{Blocking the uptake of EV}
+%This will include antibody production, testing sera by western, IP and elisa. Possibly de-glycosylation
+\newpage\chapter{Transcriptional analysis of cell type specificity for uptake of EV}
+%This will include the RNA seq experiment and analysis 
+\newpage\chapter{Transcriptional signatures associated with EV uptake in organoid cultures}
+\newpage\chapter{Validation of immune modulating function of EV}
+\newpage\chapter{EV in colitis model}
+\newpage\chapter{Discussion}
+
+
+
+
+
+\newpage
+
+\bibliographystyle{agsm}
+\bibliography{references.bib}
+
+
+
+\end{document}
